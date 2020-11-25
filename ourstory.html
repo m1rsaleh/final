@@ -1,0 +1,67 @@
+
+             <div class="sunglasses ">
+
+                <div class="left-sunglasses col-md-6 ">
+                    <img src="./IMG/KAKA-Bird-Sunglasses-Caramel-2_720x.jpg" alt="">
+                    <h5>All our frames are prescription ready eyewear</h5>
+                    <h3>Shown on Kaka Caramel</h3>
+                </div>
+                <div class="right-sunglasses col-md-6">
+                    <img src="./IMG/Otus-Caramel-hang-1-bird-sunglasses_720x.jpg" alt="">
+                    <h5>All our frames are prescription ready eyewear</h5>
+                    <h3>Shown on Kaka Caramel</h3>
+                </div>
+
+            </div> 
+
+
+
+
+
+
+
+
+
+            .sunglasses {
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 2rem;
+                @include mobile {
+                  flex-direction: column;
+                  margin-top: 15rem;
+                  padding: 10px;
+                }
+        
+                h5 {
+                  @include mobile {
+                    margin-top: 20px;
+                  }
+                  color: #637381;
+                }
+                h3 {
+                  color: #637381;
+                }
+        
+                .left-sunglasses {
+                  flex: 0 0 0;
+                  img {
+                    width: 685px;
+                    height: 685px;
+                    @include mobile {
+                      width: 335px;
+                      height: 335px;
+                    }
+                  }
+                }
+                .right-sunglasses {
+                  flex: 0 0 0;
+                  img {
+                    @include mobile {
+                      width: 335px;
+                      height: 335px;
+                    }
+                    width: 685px;
+                    height: 685px;
+                  }
+                }
+              }
