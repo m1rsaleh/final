@@ -1,0 +1,624 @@
+@import "../scss/variables";
+@import "../scss/mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+body {
+  header {
+    #head {
+      .head-title {
+        background-color: #013299;
+
+        p {
+          color: #fff;
+          text-align: center;
+        }
+      }
+      .firstnav {
+        position: sticky;
+        z-index: 400;
+        @include mobile {
+          display: flex;
+          flex-wrap: nowrap;
+        }
+
+        .middle-head {
+          display: flex;
+          justify-content: space-between;
+          @include mobile {
+            align-items: center;
+            order: 2;
+          }
+          .search {
+            margin-left: 14px;
+            height: 25px;
+            @include mobile {
+              margin-left: 2px;
+            }
+
+            form {
+              button {
+                border: none;
+                img {
+                  width: 24px;
+                }
+              }
+
+              input {
+                border: none;
+
+                @include mobile {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          .logo {
+            @include mobile {
+              margin-left: 30px;
+            }
+            img {
+              width: 125px;
+              height: 31px;
+            }
+          }
+
+          .account {
+            margin-left: 10px;
+            margin-right: 14px;
+            display: flex;
+            justify-content: space-between;
+            .main-a {
+              margin: 0px 5px;
+              text-decoration: none;
+              color: #838383;
+              @include mobile {
+                display: none;
+              }
+            }
+            .acc {
+              @include mobile {
+                display: flex;
+                flex-direction: row;
+                margin-left: 22px;
+              }
+              .bag {
+                margin: 0px 5px;
+                text-decoration: none;
+                @include mobile {
+                  margin: 0;
+
+                  margin-left: 10px;
+                }
+                img {
+                  width: 24px;
+                  @include mobile {
+                    display: block;
+                  }
+                }
+              }
+              .account-mobile {
+                display: none;
+
+                @include mobile {
+                  display: block;
+                  margin-right: 10px;
+                }
+                img {
+                  width: 24px;
+                }
+              }
+            }
+          }
+        }
+
+        .nav-bar {
+          nav {
+            border: 2px solid #e2e2e2;
+            margin-top: 10px;
+
+            @include mobile {
+              border: none;
+              width: 80px;
+              height: 60px;
+            }
+
+            .menu {
+              justify-content: center;
+              .navbar-nav {
+                .nav-item {
+                }
+                .dropdown {
+                  .dropdown-toggle {
+                  }
+                  .dropdown-menu {
+                    &:hover {
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    .slider {
+      height: 720px;
+
+      background-image: url("./IMG/The-Dunes-37_1950x.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left center;
+      color: white;
+
+      @include mobile {
+        height: 500px;
+      }
+      .slider-text {
+        position: relative;
+        top: 17rem;
+        text-align: center;
+        color:  #333029;
+        @include mobile {
+          top: 5rem;
+        }
+        p {
+          font-size: 12px;
+          font-weight: bold;
+        }
+        h1 {
+          font-size: 96px;
+        }
+        h6 {
+          font-size: 21px;
+        }
+      }
+    }
+    .text {
+      height: 270px;
+      background-color: #f6f6f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        width: 720px;
+        font-size: 28px;
+        color: #333029;
+        font-weight: bold;
+      }
+    }
+    .layout {
+      margin: 0;
+      padding: 0;
+      margin-top: 3rem;
+      margin-bottom: 8rem;
+      .left-layout {
+        @include mobile {
+          margin-bottom: 12rem;
+          padding: 2rem;
+          margin-top: 4rem;
+          margin-right: 2rem;
+        }
+        align-self: center;
+        padding: 10rem;
+        div {
+          @include mobile {
+            width: auto;
+          }
+          height: 70px;
+          width: 480px;
+          text-align: center;
+          margin-left: 15%;
+
+          span {
+            font-size: 12px;
+            color: #637381;
+          }
+
+          h1 {
+            font-size: 28px;
+            columns: #333029;
+          }
+          p {
+            font-size: 15px;
+            color: #637381;
+          }
+          .btn {
+            color: #fff;
+            background-color: #013299;
+
+            width: 140px;
+            height: 50px;
+            padding: 11px;
+            margin-top: 20px;
+            &:hover {
+              cursor: pointer;
+              background-color: black;
+              color: #fff;
+              border-color: black;
+            }
+          }
+        }
+      }
+      .right-layout {
+        @include mobile {
+          padding-left: 15px;
+          position: relative;
+          width: 335px;
+        }
+        .first-img {
+          position: relative;
+          z-index: 1;
+          width: 365px;
+          height: 456px;
+          top: 12%;
+          left: 6%;
+          @include mobile {
+            width: 190px;
+            height: 238px;
+            top: 9%;
+            left: 8%;
+          }
+        }
+
+        .second-img {
+          width: 365px;
+          height: 456px;
+          @include mobile {
+            position: absolute;
+            left: 45%;
+            width: 190px;
+            height: 238px;
+          }
+        }
+      }
+    }
+    .photo {
+      height: 720px;
+      background-image: url("./IMG/C82A9963-bcorp_1950x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .photo-text {
+        width: 39rem;
+        margin-left: 3rem;
+        color: #fff;
+        @include mobile{
+          margin-right: 2rem;
+        }
+        p {
+          font-size: 12px;
+      
+        }
+        h1 {
+          font-size: 60px;
+@include mobile{
+  font-size: 22px;
+}
+        }
+        h3 {
+          font-size: 21px;
+         @include mobile{
+           font-size: 18px ;
+         }
+        }
+      }
+    }
+    .read {
+      margin: 0;
+      padding: 0;
+      margin-top: 3rem;
+      margin-bottom: 8rem;
+      .left-read {
+        @include mobile {
+          margin-bottom: 12rem;
+          padding: 2rem;
+          margin-top: 4rem;
+          margin-right: 2rem;
+        }
+        align-self: center;
+        padding: 10rem;
+        div {
+          @include mobile {
+            width: auto;
+          }
+          height: 70px;
+          width: 480px;
+          text-align: center;
+          margin-left: 15%;
+
+          span {
+            font-size: 12px;
+            color: #637381;
+          }
+
+          h1 {
+            font-size: 28px;
+            columns: #333029;
+            font-weight: bold;
+          }
+          p {
+            font-size: 15px;
+            color: #637381;
+          }
+          .btn {
+            color: #fff;
+            background-color: #013299;
+
+            width: 140px;
+            height: 50px;
+            padding: 11px;
+            margin-top: 20px;
+            &:hover {
+              cursor: pointer;
+              background-color: black;
+              color: #fff;
+              border-color: black;
+            }
+          }
+        }
+      }
+      .right-read {
+        @include mobile {
+          padding-left: 15px;
+          position: relative;
+          width: 335px;
+        }
+        .first-img-read {
+          position: relative;
+          z-index: 1;
+          width: 365px;
+          height: 456px;
+          top: 12%;
+          left: 6%;
+          @include mobile {
+            width: 190px;
+            height: 238px;
+            top: 9%;
+            left: 8%;
+          }
+        }
+
+        .second-img-read {
+          width: 365px;
+          height: 456px;
+          @include mobile {
+            position: absolute;
+            left: 45%;
+            width: 190px;
+            height: 238px;
+          }
+        }
+      }
+    }
+    .last-text{
+display: flex;
+justify-content: center;
+           
+      p{
+     
+        color: #637381;
+        font-size: 21px;
+        width: 500px;
+        height: 65px;
+        @include mobile{
+          font-size: 18px;
+          margin-bottom: 3rem;
+          padding: 1rem;
+        }
+        a{
+          color: #637381;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  footer {
+    .first-foot {
+      background-color: #f6f6f6;
+      width: auto;
+      display: flex;
+      justify-content: space-evenly;
+
+      height: 100px;
+      padding: 20px;
+      @include mobile {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+      }
+      .delivery {
+        text-align: center;
+
+        img {
+          width: 30px;
+        }
+        p {
+          font-size: 18px;
+          color: #333029;
+        }
+      }
+      .location {
+        text-align: center;
+
+        img {
+          width: 30px;
+        }
+        p {
+          font-size: 18px;
+          color: #333029;
+        }
+      }
+      .gift {
+        text-align: center;
+
+        img {
+          width: 30px;
+        }
+        p {
+          font-size: 18px;
+          color: #333029;
+        }
+      }
+      .discount {
+        text-align: center;
+
+        img {
+          width: 30px;
+        }
+        p {
+          font-size: 18px;
+          color: #333029;
+        }
+      }
+    }
+    .middle-foot {
+      display: flex;
+      padding: 60px;
+      justify-content: space-around;
+      @include mobile {
+        flex-direction: column;
+        padding: 10px;
+        margin-top: 2rem;
+      }
+      h6 {
+        font-size: 17px;
+        color: black;
+      }
+      .about-store {
+        width: 460px;
+
+        p {
+          color: #939393;
+        }
+        i {
+          font-size: 40px;
+          color: #939393;
+        }
+
+        @include mobile {
+          width: auto;
+        }
+      }
+      .shop-foot {
+        width: 180px;
+        @include mobile {
+          margin-top: 18px;
+        }
+        ul {
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+      .help {
+        width: 100px;
+        ul {
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+      .newsletter {
+        width: 350px;
+        @include mobile {
+          width: auto;
+        }
+
+        input {
+          font-family: "Font Awesome 5 Brands";
+          font-size: 23px;
+          line-height: 40px;
+        }
+        a {
+          background-color: #013299;
+          color: #fff;
+          margin-top: 10px;
+          width: 131px;
+          height: 50px;
+          padding: 12px;
+          border-radius: 0;
+          &:hover {
+            background-color: black;
+            border-color: black;
+          }
+        }
+      }
+    }
+    .last-foot {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      @include mobile {
+        flex-direction: column;
+      }
+      .copyright {
+        display: flex;
+        width: auto;
+        height: 50px;
+        color: #939393;
+
+        span {
+          a {
+            text-decoration: none;
+            color: #939393;
+            &:hover {
+              color: #697886;
+            }
+          }
+        }
+        p {
+          a {
+            text-decoration: none;
+            color: #939393;
+            &:hover {
+              color: #697886;
+            }
+          }
+        }
+        a {
+          margin-right: 5px;
+          text-decoration: none;
+          color: #939393;
+          &:hover {
+            color: #697886;
+          }
+        }
+      }
+      .payment-method {
+        @include mobile {
+          margin-top: 20px;
+        }
+        img {
+          width: 60px;
+        }
+        a {
+          margin-top: 10px;
+          text-decoration: none;
+          color: #939393;
+          &:hover {
+            color: #697886;
+          }
+        }
+      }
+    }
+  }
+}

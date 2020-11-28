@@ -1,0 +1,365 @@
+@import '../scss/variables';
+@import '../scss/mixin';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    header {
+      #head {
+        .head-title {
+          background-color: #013299;
+  
+          p {
+            color: #fff;
+            text-align: center;
+          }
+        }
+        .firstnav {
+          position: sticky;
+          z-index: 400;
+          @include mobile {
+            display: flex;
+            flex-wrap: nowrap;
+          }
+  
+          .middle-head {
+            display: flex;
+            justify-content: space-between;
+            @include mobile {
+              align-items: center;
+              order: 2;
+            }
+            .search {
+              margin-left: 14px;
+              height: 25px;
+              @include mobile {
+                margin-left: 2px;
+              }
+  
+              form {
+                button {
+                  border: none;
+                  img {
+                    width: 24px;
+                  }
+                }
+  
+                input {
+                  border: none;
+  
+                  @include mobile {
+                    display: none;
+                  }
+                }
+              }
+            }
+  
+            .logo {
+              @include mobile {
+                margin-left: 30px;
+              }
+              img {
+                width: 125px;
+                height: 31px;
+              }
+            }
+  
+            .account {
+              margin-left: 10px;
+              margin-right: 14px;
+              display: flex;
+              justify-content: space-between;
+              .main-a {
+                margin: 0px 5px;
+                text-decoration: none;
+                color: #838383;
+                @include mobile {
+                  display: none;
+                }
+              }
+              .acc {
+                @include mobile {
+                  display: flex;
+                  flex-direction: row;
+                  margin-left: 22px;
+                }
+                .bag {
+                  margin: 0px 5px;
+                  text-decoration: none;
+                  @include mobile {
+                    margin: 0;
+  
+                    margin-left: 10px;
+                  }
+                  img {
+                    width: 24px;
+                    @include mobile {
+                      display: block;
+                    }
+                  }
+                }
+                .account-mobile {
+                  display: none;
+  
+                  @include mobile {
+                    display: block;
+                    margin-right: 10px;
+                  }
+                  img {
+                    width: 24px;
+                  }
+                }
+              }
+            }
+          }
+  
+          .nav-bar {
+            nav {
+              border: 2px solid #e2e2e2;
+              margin-top: 10px;
+  
+              @include mobile {
+                border: none;
+                width: 80px;
+                height: 60px;
+              }
+  
+              .menu {
+                justify-content: center;
+                .navbar-nav {
+                  .nav-item {
+                  }
+                  .dropdown {
+                    .dropdown-toggle {
+                    }
+                    .dropdown-menu {
+                      &:hover {
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    main{
+        .text{
+            text-align: center;
+            padding: 70px;
+            h1{
+                font-size: 28px;
+                color: #333029;
+
+            }
+            p{
+                color: #637381;
+                font-size: 15px;
+                margin: 60px 0;
+            }
+        }
+    }
+  
+    footer {
+      .first-foot {
+        background-color: #f6f6f6;
+        width: auto;
+        display: flex;
+        justify-content: space-evenly;
+  
+        height: 100px;
+        padding: 20px;
+        @include mobile {
+          flex-direction: column;
+          height: auto;
+          align-items: center;
+        }
+        .delivery {
+          text-align: center;
+  
+          img {
+            width: 30px;
+          }
+          p {
+            font-size: 18px;
+            color: #333029;
+          }
+        }
+        .location {
+          text-align: center;
+  
+          img {
+            width: 30px;
+          }
+          p {
+            font-size: 18px;
+            color: #333029;
+          }
+        }
+        .gift {
+          text-align: center;
+  
+          img {
+            width: 30px;
+          }
+          p {
+            font-size: 18px;
+            color: #333029;
+          }
+        }
+        .discount {
+          text-align: center;
+  
+          img {
+            width: 30px;
+          }
+          p {
+            font-size: 18px;
+            color: #333029;
+          }
+        }
+      }
+      .middle-foot {
+        display: flex;
+        padding: 60px;
+        justify-content: space-around;
+        @include mobile {
+          flex-direction: column;
+          padding: 10px;
+          margin-top: 2rem;
+        }
+        h6 {
+          font-size: 17px;
+          color: black;
+        }
+        .about-store {
+          width: 460px;
+  
+          p {
+            color: #939393;
+          }
+          i {
+            font-size: 40px;
+            color: #939393;
+          }
+  
+          @include mobile {
+            width: auto;
+          }
+        }
+        .shop-foot {
+          width: 180px;
+          @include mobile {
+            margin-top: 18px;
+          }
+          ul {
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
+          }
+        }
+        .help {
+          width: 100px;
+          ul {
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
+          }
+        }
+        .newsletter {
+          width: 350px;
+          @include mobile {
+            width: auto;
+          }
+  
+          input {
+            font-family: "Font Awesome 5 Brands";
+            font-size: 23px;
+            line-height: 40px;
+          }
+          a {
+            background-color: #013299;
+            color: #fff;
+            margin-top: 10px;
+            width: 131px;
+            height: 50px;
+            padding: 12px;
+            border-radius: 0;
+            &:hover {
+              background-color: black;
+              border-color: black;
+            }
+          }
+        }
+      }
+      .last-foot {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        @include mobile {
+          flex-direction: column;
+        }
+        .copyright {
+          display: flex;
+          width: auto;
+          height: 50px;
+          color: #939393;
+  
+          span {
+            a {
+              text-decoration: none;
+              color: #939393;
+              &:hover {
+                color: #697886;
+              }
+            }
+          }
+          p {
+            a {
+              text-decoration: none;
+              color: #939393;
+              &:hover {
+                color: #697886;
+              }
+            }
+          }
+          a {
+            margin-right: 5px;
+            text-decoration: none;
+            color: #939393;
+            &:hover {
+              color: #697886;
+            }
+          }
+        }
+        .payment-method {
+          @include mobile {
+            margin-top: 20px;
+          }
+          img {
+            width: 60px;
+          }
+          a {
+            margin-top: 10px;
+            text-decoration: none;
+            color: #939393;
+            &:hover {
+              color: #697886;
+            }
+          }
+        }
+      }
+    }
+  }
+  
