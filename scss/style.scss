@@ -43,6 +43,9 @@
                 @include mobile {
                   margin-left: 2px;
                 }
+                @include extra-small-mobile{
+                  display: none;
+                }
   
                 form {
                   button {
@@ -66,6 +69,7 @@
                 @include mobile {
                   margin-left: 30px;
                 }
+               
                 img {
                   width: 125px;
                   height: 31px;
@@ -464,6 +468,9 @@
               background-color: #013299;
               padding: 16px 75px;
               margin-top: 80px;
+              @include mobile{
+                margin-bottom: 50px;
+              }
   
               &:hover {
                 background-color: black;
